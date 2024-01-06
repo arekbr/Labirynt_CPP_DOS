@@ -10,7 +10,7 @@
 int i, y;
 using namespace std;
 
-int plansza[507] = { 0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+int plansza[507] = {0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
                     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,
                     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,
                     1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,
@@ -634,10 +634,12 @@ void labirynt()
 
 void pionek()
 {
-    gotoxy(3, 3);
-    cout << "!";
+    int w;
+    gotoxy(19, 4);
 
-    system("pause");
+    cout << "!!!!!!!!";
+
+    cin >> w;
 }
 
 
@@ -647,6 +649,7 @@ int main()
 {
     SetConsoleCP(437);
     SetConsoleOutputCP(437);
+
     thread first(labirynt);
     thread second(pionek);
     first.join();                // pauses until first finishes
